@@ -1,12 +1,10 @@
-performances = {}
-try:
-    schedule_file = open('schedule.txt', 'r')
-except FileNotFoundError as err:
-    print(err)
+import requests
+  
+url = "http://api.openweathermap.org/data/2.5/weather?q=Orlando,fl&units=imperial&appid=2de143494c0b295cca9337e1e96b00e0"
+request = requests.get(url)
 
-for line in schedule_file:
-    (show, time) = line.split(' - ')
-    performances[show] = time
-
-schedule_file.close()
-print(performances)
+weather_json = request.json()
+print(weather_json)
+weather_main = weather_json['main']
+temp = weather_main['temp']
+print("The Circus's current temperature is", temp)
