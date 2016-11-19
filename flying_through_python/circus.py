@@ -1,5 +1,4 @@
-performances = ['Ventriloquism', 'Amazing Acrobatics', 'Snake Charmer', 'Enchanted Elephants', 'Bearded Lady', 'Tiniest Man']
-# performances.append('Snake Charmer')
-performances.remove('Bearded Lady')
-performances.remove('Tiniest Man')
+erformances = {'Ventriloquism':'9:00am', 'Snake Charmer': '12:00pm'}
+performances['Amazing Acrobatics'] = '2:00pm'
+performances['Enchanted Elephants'] = '5:00pm'
 print(performances)
